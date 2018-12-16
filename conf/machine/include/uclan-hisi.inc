@@ -22,7 +22,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
     gptfdisk \
 "
 
-MACHINE_FEATURES += "videoenhancement switchoff 7segment textlcd emmc mmc blindscan-dvbs alsa HDMI AV_JACK"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa HDMI AV_JACK"
 #MACHINE_FEATURES += "hbbtv-browser-webkit qtstalker"
 
 IMAGE_CLASSES  += "uclan-emmc_image"
