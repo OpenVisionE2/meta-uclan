@@ -8,14 +8,14 @@ RDEPENDS_${PN} = "libsdl"
 
 COMPATIBLE_MACHINE = "ustym4kpro"
 
-SRCDATE = "20181203"
+SRCDATE = "20181224"
 
 PV = "${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-libreader-${SRCDATE}.zip"
 
-SRC_URI[md5sum] = "d1a300c426df61d2de185f7bd8c4bce2"
-SRC_URI[sha256sum] = "55e02cc1716048e06538b84e837f1728269ed69aee0993b49cbe102d74f05e11"
+SRC_URI[md5sum] = "c1f4befa4173fbfb3cb8de850e940e2c"
+SRC_URI[sha256sum] = "2f665b2054f127c9440d2c08ed209423b432caa9bf6d6c3f281461a8475f9925"
 
 S = "${WORKDIR}"
 
