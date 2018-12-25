@@ -1,2 +1,2 @@
 # meta-uclan
-Uclan BSP layer for PLi's OE
+Uclan BSP layer for Open Vision
