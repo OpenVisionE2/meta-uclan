@@ -9,14 +9,14 @@ COMPATIBLE_MACHINE = "ustym4kpro"
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
-SRCDATE = "20190116"
+SRCDATE = "20190305"
 
 PV = "${SRCDATE}"
 
 SRC_URI  = "http://source.mynonpublic.com/uclan/${MACHINE}-blindscan-${SRCDATE}.zip"
 
-SRC_URI[md5sum] = "899430e3f4e4e69d5652e7584bce86fc"
-SRC_URI[sha256sum] = "8ff56061ef69ca5a9bcfdecde2d68e66dcac0bc625f89732b435f580efc6172d"
+SRC_URI[md5sum] = "ee98e5c30d36a7afaff364e6015e0956"
+SRC_URI[sha256sum] = "2eb583117f45a5e7d88a2843ff60ba7cf2420deb1987af83ae6299b8433a21ba"
 
 S = "${WORKDIR}"
 
