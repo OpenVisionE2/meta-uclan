@@ -17,6 +17,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
     uclan-dvb-modules-${MACHINE} \
     uclan-loadmodules-${MACHINE} \ 
     uclan-libs-${MACHINE} \
+    uclan-hihalt-${MACHINE} \
     uclan-reader-${MACHINE} \
     uclan-libreader-${MACHINE} \
     uclan-partitions-${MACHINE} \
@@ -38,6 +39,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-uclan"
 PREFERRED_VERSION_linux-uclan = "4.4.35"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "uclan-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "uclan-showiframe-${MACHINE}"
+PREFERRED_RPROVIDER_aio-grab = "uclan-grab-${MACHINE}"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
