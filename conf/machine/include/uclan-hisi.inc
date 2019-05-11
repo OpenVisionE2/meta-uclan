@@ -23,6 +23,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
     uclan-partitions-${MACHINE} \
     e2fsprogs-resize2fs \
     gptfdisk \
+    kernel-module-rtl8187 \
 "
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa HDMI AV_JACK"
