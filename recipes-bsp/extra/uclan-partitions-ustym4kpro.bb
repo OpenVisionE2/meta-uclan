@@ -13,7 +13,9 @@ COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 S = "${WORKDIR}/patitions"
 
-SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-partitions-${SRCDATE}.zip"
+SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-partitions-${SRCDATE}.zip \
+           file://LICENSE-CLOSE \
+"
 
 SRC_URI[md5sum] = "07d78ac8046b09d6f4fffae1f3b50fe8"
 SRC_URI[sha256sum] = "530715463cf87f87aee81128ec8cd51ed7696fc8a75522d03053ead680d9dc8e"
@@ -43,6 +45,11 @@ do_deploy() {
     install -m 0755 ${S}/deviceinfo.bin ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
 }
 
+do_license() {
+	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE
+}
+
+addtask do_license before do_populate_lic after do_unpack
 addtask deploy before do_build after do_install
 
 INSANE_SKIP_${PN} += "already-stripped"
