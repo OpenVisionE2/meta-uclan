@@ -9,7 +9,7 @@ inherit deploy
 
 SRCDATE = "20190515"
 
-COMPATIBLE_MACHINE = "ustym4kpro"
+COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 S = "${WORKDIR}/patitions"
 

@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "ustym4kpro"
+COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 RDEPENDS_${PN} = "harfbuzz"
 

@@ -6,7 +6,7 @@ require conf/license/license-gplv2.inc
 
 PV = "1.0"
 
-COMPATIBLE_MACHINE = "ustym4kpro"
+COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 SRC_URI = "file://uclan-loadmodules-ustym4kpro.sh"
 

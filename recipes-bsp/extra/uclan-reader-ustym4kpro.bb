@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 RDEPENDS_${PN} = "libsdl"
 
-COMPATIBLE_MACHINE = "ustym4kpro"
+COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 SRCDATE = "20190808"
 

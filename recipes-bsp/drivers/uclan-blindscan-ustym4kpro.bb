@@ -4,7 +4,7 @@ PRIORITY = "optional"
 LICENSE = "CLOSED"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-COMPATIBLE_MACHINE = "ustym4kpro"
+COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
