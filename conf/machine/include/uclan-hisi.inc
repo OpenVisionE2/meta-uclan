@@ -30,7 +30,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 "
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa HDMI AV_JACK"
-#MACHINE_FEATURES += "hbbtv-browser-webkit qtstalker"
 
 IMAGE_CLASSES  += "uclan-emmc_image"
 IMAGE_FSTYPES += "uclanemmc"
