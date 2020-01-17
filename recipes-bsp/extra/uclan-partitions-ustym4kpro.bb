@@ -52,4 +52,3 @@ do_license() {
 addtask do_license before do_populate_lic after do_unpack
 addtask deploy before do_build after do_install
 
-INSANE_SKIP_${PN} += "already-stripped"
