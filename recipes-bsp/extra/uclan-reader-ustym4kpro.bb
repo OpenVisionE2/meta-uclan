@@ -1,4 +1,4 @@
-SUMMARY = "libreader for uclan Model ${MACHINE}"
+SUMMARY = "libreader for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"

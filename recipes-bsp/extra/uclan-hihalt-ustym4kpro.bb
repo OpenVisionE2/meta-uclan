@@ -1,4 +1,4 @@
-SUMMARY = "halt for Uclan Model ${MACHINE}"
+SUMMARY = "halt for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"

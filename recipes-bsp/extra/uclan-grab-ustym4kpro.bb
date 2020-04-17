@@ -1,4 +1,4 @@
-SUMMARY = "grab for Uclan Model ${MACHINE}"
+SUMMARY = "grab for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
