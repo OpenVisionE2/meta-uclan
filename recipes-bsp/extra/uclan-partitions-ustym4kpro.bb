@@ -7,7 +7,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit deploy
 
-SRCDATE = "20190515"
+SRCDATE = "20200417"
 
 COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
@@ -17,8 +17,8 @@ SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-partitions-${SRCDATE}.
            file://LICENSE-CLOSE \
 "
 
-SRC_URI[md5sum] = "07d78ac8046b09d6f4fffae1f3b50fe8"
-SRC_URI[sha256sum] = "530715463cf87f87aee81128ec8cd51ed7696fc8a75522d03053ead680d9dc8e"
+SRC_URI[md5sum] = "353c791ee72133ae0690756302ccadca"
+SRC_URI[sha256sum] = "3c258b2ae1252df59abfd255910e3adec5b5983c3b62d6388211c369d4a7807b"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
