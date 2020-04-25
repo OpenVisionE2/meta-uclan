@@ -5,20 +5,23 @@ LICENSE = "CLOSED"
 require conf/license/license-close.inc
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-inherit deploy
+inherit deploy update-rc.d
 
-SRCDATE = "20200417"
+SRCDATE = "20200423"
 
 COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 S = "${WORKDIR}/patitions"
 
 SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-partitions-${SRCDATE}.zip \
-           file://LICENSE-CLOSE \
+  file://flash-apploader \
 "
 
-SRC_URI[md5sum] = "353c791ee72133ae0690756302ccadca"
-SRC_URI[sha256sum] = "3c258b2ae1252df59abfd255910e3adec5b5983c3b62d6388211c369d4a7807b"
+INITSCRIPT_NAME = "flash-apploader"
+INITSCRIPT_PARAMS = "start 90 S ."
+
+SRC_URI[md5sum] = "596a82a61e19eca8f3860459b4ba1692"
+SRC_URI[sha256sum] = "fe4c796b7785c93ca0022af9c7816c1545f28a472d3d9d25d3746fe1fbd0e809"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
@@ -28,9 +31,11 @@ do_install() {
     install -m 0644 ${S}/bootargs.bin ${D}${datadir}/bootargs.bin
     install -m 0644 ${S}/fastboot.bin ${D}${datadir}/fastboot.bin
     install -m 0644 ${S}/apploader.bin ${D}${datadir}/apploader.bin
+    install -m 0755 -d ${D}${sysconfdir}/init.d
+    install -m 0755 ${WORKDIR}/flash-apploader ${D}${sysconfdir}/init.d/flash-apploader
 }
 
-FILES_${PN} = "${datadir}"
+FILES_${PN} = "${datadir} ${sysconfdir}"
 
 do_deploy() {
     install -d ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
@@ -43,10 +48,6 @@ do_deploy() {
     install -m 0755 ${S}/baseparam.img ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
     install -m 0755 ${S}/logo.img ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
     install -m 0755 ${S}/deviceinfo.bin ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
-}
-
-do_license() {
-	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE
 }
 
 addtask do_license before do_populate_lic after do_unpack

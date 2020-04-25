@@ -9,7 +9,6 @@ PV = "${KV}+${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-hiko-${SRCDATE}.zip \
     file://modules \
-    file://LICENSE-CLOSE \
 "
 
 S = "${WORKDIR}/hiko"
@@ -30,10 +29,6 @@ do_install() {
     install -m 0755  ${S}/load ${D}/lib/modules/${KV}/extra
     install -d ${D}/${sysconfdir}/modules-load.d
     install -m 0644 ${WORKDIR}/modules ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
-}
-
-do_license() {
-	mv ${WORKDIR}/LICENSE-CLOSE ${B}/LICENSE-CLOSE
 }
 
 addtask do_license before do_populate_lic after do_unpack

@@ -2,9 +2,7 @@ SUMMARY = "Creat the usb ugrade file"
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
 
-SRC_URI = "file://buildimage.zip \
-           file://LICENSE-CLOSE \
-"
+SRC_URI = "file://buildimage.zip"
 
 S = "${WORKDIR}"
 
