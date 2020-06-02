@@ -26,7 +26,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
     e2fsprogs-resize2fs \
     gptfdisk \
     kernel-module-rtl8187 \
-    rtl8192eu \
+    kernel-module-extrawlan-rtl8192eu \
     firmware-rtl8192eu \
 "
 
