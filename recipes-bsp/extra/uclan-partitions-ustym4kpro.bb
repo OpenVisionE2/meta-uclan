@@ -5,11 +5,11 @@ LICENSE = "CLOSED"
 require conf/license/license-close.inc
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
+COMPATIBLE_MACHINE = "^(ustym4kpro)$"
+
 inherit deploy update-rc.d
 
 SRCDATE = "20200624"
-
-COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 S = "${WORKDIR}/patitions"
 
@@ -50,6 +50,5 @@ do_deploy() {
     install -m 0755 ${S}/deviceinfo.bin ${DEPLOY_DIR_IMAGE}/${MACHINE}-partitions
 }
 
-addtask do_license before do_populate_lic after do_unpack
 addtask deploy before do_build after do_install
 

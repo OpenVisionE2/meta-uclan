@@ -30,5 +30,3 @@ do_install() {
     install -d ${D}/${sysconfdir}/modules-load.d
     install -m 0644 ${WORKDIR}/modules ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
-
-addtask do_license before do_populate_lic after do_unpack
