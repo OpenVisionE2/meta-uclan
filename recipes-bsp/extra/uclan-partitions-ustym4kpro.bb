@@ -11,6 +11,8 @@ inherit deploy update-rc.d
 
 SRCDATE = "20200624"
 
+PV = "${SRCDATE}"
+
 S = "${WORKDIR}/patitions"
 
 SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-partitions-${SRCDATE}.zip \
