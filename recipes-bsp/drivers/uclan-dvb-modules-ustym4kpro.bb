@@ -1,4 +1,3 @@
-KV = "4.4.35"
 SRCDATE = "20200613"
 
 require uclan-dvb-modules-hisi.inc
