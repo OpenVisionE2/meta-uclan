@@ -3,7 +3,7 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 BOX_BRAND = "uclan"
 
-DISTRO_FEATURES_remove = "x11 wayland"
+DISTRO_FEATURES_remove += "x11 wayland"
 
 EXTRA_OECONF_append_pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250 --with-fillaccelerationthreshold=190000"
 
@@ -35,7 +35,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
     firmware-rtl8192eu \
 "
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK"
 
 IMAGE_CLASSES  += "uclan-emmc_image"
 IMAGE_FSTYPES += "uclanemmc"
@@ -49,7 +49,7 @@ PREFERRED_VERSION_linux-uclan = "4.4.35"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "uclan-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "uclan-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "uclan-grab-${MACHINE}"
-PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
+PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-servicehisilicon"
 
 require conf/machine/include/tune-cortexa15.inc
 
