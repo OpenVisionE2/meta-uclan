@@ -87,3 +87,5 @@ IMAGE_CMD_uclanemmc_append = "\
     rm -Rf ${DEPLOY_DIR_IMAGE}/usb_update.bin; \
     rm -Rf ${IMAGEDIR}; \
     "
+
+EXTRA_ALSA = "mv200"
