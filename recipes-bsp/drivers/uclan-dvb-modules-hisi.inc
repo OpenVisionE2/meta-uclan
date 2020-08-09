@@ -6,13 +6,13 @@ require conf/license/license-close.inc
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-KV = "4.4.35"
+KV = "${KERNELVERSION}"
 
 PV = "${KV}+${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-hiko-${SRCDATE}.zip \
-    file://modules \
-"
+	file://modules \
+	"
 
 S = "${WORKDIR}/hiko"
 

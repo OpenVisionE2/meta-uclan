@@ -1,6 +1,8 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "4.4.35"
+
 BOX_BRAND = "uclan"
 
 DISTRO_FEATURES_remove += "x11 wayland"
@@ -21,20 +23,20 @@ ROOTFS_FILE = "rootfs.tar.bz2"
 MTD_BLACK  = "mmcblk0"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    uclan-dvb-modules-${MACHINE} \
-    uclan-loadmodules-${MACHINE} \ 
-    uclan-libs-${MACHINE} \
-    uclan-hihalt-${MACHINE} \
-    uclan-reader-${MACHINE} \
-    uclan-libreader-${MACHINE} \
-    uclan-partitions-${MACHINE} \
-    uclan-tntfs-${HICHIPSET} \
-    e2fsprogs-resize2fs \
-    gptfdisk \
-    kernel-module-rtl8187 \
-    kernel-module-extrawlan-rtl8192eu \
-    firmware-rtl8192eu \
-"
+	uclan-dvb-modules-${MACHINE} \
+	uclan-loadmodules-${MACHINE} \ 
+	uclan-libs-${MACHINE} \
+	uclan-hihalt-${MACHINE} \
+	uclan-reader-${MACHINE} \
+	uclan-libreader-${MACHINE} \
+	uclan-partitions-${MACHINE} \
+	uclan-tntfs-${HICHIPSET} \
+	e2fsprogs-resize2fs \
+	gptfdisk \
+	kernel-module-rtl8187 \
+	kernel-module-extrawlan-rtl8192eu \
+	firmware-rtl8192eu \
+	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol"
 
@@ -46,7 +48,7 @@ TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-uclan"
-PREFERRED_VERSION_linux-uclan = "4.4.35"
+PREFERRED_VERSION_linux-uclan = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "uclan-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "uclan-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "uclan-grab-${MACHINE}"
@@ -55,12 +57,11 @@ PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-
 require conf/machine/include/tune-cortexa15.inc
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    gstreamer1.0-plugin-dvbmediasink \
-    "
+	gstreamer1.0-plugin-dvbmediasink \
+	"
 
 DVBPROVIDER = "kernel"
 DVBSKYPROVIDER = "kernel"
-
 
 require conf/machine/include/soc-family.inc
 
