@@ -92,3 +92,5 @@ IMAGE_CMD_uclanemmc_append = " \
 EXTRA_ALSA = "mv200"
 
 BLINDSCAN_BINARY = "uclan-blindscan"
+
+RCNAME = "uclan"
