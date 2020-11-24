@@ -30,7 +30,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	uclan-reader-${MACHINE} \
 	uclan-libreader-${MACHINE} \
 	uclan-partitions-${MACHINE} \
-	uclan-tntfs-${HICHIPSET} \
 	e2fsprogs-resize2fs \
 	gptfdisk \
 	kernel-module-rtl8187 \
