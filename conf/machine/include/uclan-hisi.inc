@@ -34,6 +34,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gptfdisk \
 	kernel-module-rtl8187 \
 	kernel-module-extrawlan-rtl8192eu \
+	kernel-module-extrawlan-rtl8822cu \
 	firmware-rtl8192eu \
 	gstreamer1.0-plugin-dvbmediasink \
 	"
