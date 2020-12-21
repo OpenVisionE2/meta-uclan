@@ -9,7 +9,7 @@ COMPATIBLE_MACHINE = "^(ustym4kpro)$"
 
 inherit deploy update-rc.d
 
-SRCDATE = "20200624"
+SRCDATE = "20201218"
 
 PV = "${SRCDATE}"
 
@@ -22,8 +22,8 @@ SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-partitions-${SRCDATE}.
 INITSCRIPT_NAME = "flash-apploader"
 INITSCRIPT_PARAMS = "start 90 S ."
 
-SRC_URI[md5sum] = "938e95222a7e6fd8cca58322e1c9767d"
-SRC_URI[sha256sum] = "65925d6de9b22f93c3d4b4a5a7243e47bffc0b35f5f2728567e266451ca6cd08"
+SRC_URI[md5sum] = "307ff0cf02bb38934044719819acec39"
+SRC_URI[sha256sum] = "5e5bbc7f968a999e52d8184d8c07197f531282776555c0d1a8c61730d51d5fd2"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"

@@ -1,8 +1,8 @@
-SRCDATE = "20201119"
+SRCDATE = "20201218"
 
 require uclan-dvb-modules-hisi.inc
 
-SRC_URI[md5sum] = "b736c3423ed5c96006f4c6b2d3d1bf3e"
-SRC_URI[sha256sum] = "383993d2437592f87ec68e0c371e37582406107a82c51523fd17def76d8c2b9d"
+SRC_URI[md5sum] = "b3b310eb6efefac710e27e59bbc5e3e1"
+SRC_URI[sha256sum] = "07427d233bd1bc6eaef0677e037219868d2b73d474404dea70e6bf383abd274f"
 
 COMPATIBLE_MACHINE = "^(ustym4kpro)$"
