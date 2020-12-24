@@ -3,6 +3,8 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
+COMPATIBLE_MACHINE = "^(ustym4kpro)$"
+
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
