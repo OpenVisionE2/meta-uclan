@@ -22,8 +22,8 @@ SRC_URI = "http://source.mynonpublic.com/uclan/${MACHINE}-partitions-${SRCDATE}.
 INITSCRIPT_NAME = "flash-apploader"
 INITSCRIPT_PARAMS = "start 90 S ."
 
-SRC_URI[md5sum] = "307ff0cf02bb38934044719819acec39"
-SRC_URI[sha256sum] = "5e5bbc7f968a999e52d8184d8c07197f531282776555c0d1a8c61730d51d5fd2"
+SRC_URI[md5sum] = "e35b0337adf357a8cc9d633e133579d1"
+SRC_URI[sha256sum] = "3f505429e438562a9916622b43bc8d2889e403f77536e2803d1ca4e56b2ac8f1"
 
 ALLOW_EMPTY_${PN} = "1"
 do_configure[nostamp] = "1"
