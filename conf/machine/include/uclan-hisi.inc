@@ -85,7 +85,9 @@ IMAGE_CMD_uclanemmc_append = " \
 	rm -f ${DEPLOY_DIR_IMAGE}/*.ext4; \
 	rm -f ${DEPLOY_DIR_IMAGE}/usb_update.bin; \
 	rm -Rf ${IMAGEDIR}; \
+	rm -Rf uclan; \
 	rm -Rf userdata; \
+	rm -Rf ${MACHINE}-partitions; \
 	"
 
 IMAGE_CMD_prepend = "\
