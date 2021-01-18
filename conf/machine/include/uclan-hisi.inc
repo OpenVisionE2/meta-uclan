@@ -36,7 +36,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-extrawlan-rtl8192eu \
 	kernel-module-extrawlan-rtl8822cu \
 	firmware-rtl8192eu \
-	gstreamer1.0-plugin-dvbmediasink \
 	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol"
