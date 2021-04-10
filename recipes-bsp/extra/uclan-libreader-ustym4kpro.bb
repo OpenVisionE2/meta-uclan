@@ -19,6 +19,6 @@ do_compile() {
 }
 
 do_install() {
-    install -d ${D}${sysconfdir}/init.d/
-    install -m 0755 ${WORKDIR}/uclan-libreader-ustym4kpro.sh ${D}${sysconfdir}/init.d/uclan-libreader
+    install -d ${D}${INIT_D_DIR}/
+    install -m 0755 ${WORKDIR}/uclan-libreader-ustym4kpro.sh ${D}${INIT_D_DIR}/uclan-libreader
 }
