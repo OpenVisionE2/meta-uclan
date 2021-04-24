@@ -24,7 +24,8 @@ MTD_BLACK  = "mmcblk0"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	uclan-dvb-modules-${MACHINE} \
-	uclan-loadmodules-${MACHINE} \ 
+	uclan-loadmodules-${MACHINE} \
+	uclan-opengl-${MACHINE} \
 	uclan-libs-${MACHINE} \
 	uclan-hihalt-${MACHINE} \
 	uclan-reader-${MACHINE} \
@@ -49,6 +50,9 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-uclan"
 PREFERRED_VERSION_linux-uclan = "${KERNELVERSION}"
+PREFERRED_PROVIDER_virtual/egl = "uclan-opengl-${MACHINE}" 
+PREFERRED_PROVIDER_virtual/libgles1 = "uclan-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles2 = "uclan-opengl-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "uclan-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "uclan-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "uclan-grab-${MACHINE}"
