@@ -33,10 +33,9 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	uclan-partitions-${MACHINE} \
 	e2fsprogs-resize2fs \
 	gptfdisk \
-	kernel-module-rtl8187 \
 	kernel-module-extrawlan-rtl8192eu \
-	kernel-module-extrawlan-rtl8822cu \
 	firmware-rtl8192eu \
+	kernel-module-extrawlan-rtl8822cu \
 	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol"
