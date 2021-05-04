@@ -38,7 +38,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	kernel-module-extrawlan-rtl8822cu \
 	"
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol kodi19"
 
 IMAGE_CLASSES  += "uclan-emmc_image"
 IMAGE_FSTYPES += "uclanemmc"
@@ -49,9 +49,9 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-uclan"
 PREFERRED_VERSION_linux-uclan = "${KERNELVERSION}"
-PREFERRED_PROVIDER_virtual/egl = "uclan-opengl-${MACHINE}" 
-PREFERRED_PROVIDER_virtual/libgles1 = "uclan-opengl-${MACHINE}"
-PREFERRED_PROVIDER_virtual/libgles2 = "uclan-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/egl ?= "uclan-opengl-${MACHINE}" 
+PREFERRED_PROVIDER_virtual/libgles1 ?= "uclan-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles2 ?= "uclan-opengl-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "uclan-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "uclan-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "uclan-grab-${MACHINE}"
